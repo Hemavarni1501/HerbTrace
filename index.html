@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERB TRACE - Blockchain Traceability for Ayurvedic Herbs</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #2e8b57; /* Sea Green */
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            letter-spacing: 1px;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .section {
+            background-color: #fff;
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            color: #2e8b57;
+            font-size: 2em;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .section p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        .section .caption {
+            font-style: italic;
+            color: #666;
+            text-align: center;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .video-container iframe,
+        .video-container object,
+        .video-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        footer .tech-icons img {
+            height: 40px;
+            margin: 0 10px;
+            filter: invert(1); /* Makes icons white */
+        }
+        .qr-demo {
+            margin-top: 20px;
+        }
+        .qr-demo img {
+            width: 120px;
+            height: 120px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        /* Navigation (optional, for smoother scrolling) */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #2e8b57;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .section h2 {
+                font-size: 1.6em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>HERB TRACE</h1>
+            <p>Blockchain-based Traceability for Ayurvedic Herbs: Ensuring Authenticity, Quality, and Sustainability from Farm to Consumer.</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="section" id="intro-video">
+            <h2>Watch Our Vision</h2>
+            <p>Discover how HERB TRACE revolutionizes the herbal supply chain with unparalleled transparency.</p>
+            <div class="video-container">
+                <iframe src="herbvid.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="caption">A quick overview of the HERB TRACE system.</p>
+        </div>
+
+        <div class="section" id="farmer-capture">
+            <h2>1. Farmer Capture: The Source of Truth</h2>
+            <p>Our journey begins at the farm. Farmers can easily log their harvest details using various methods, establishing the first immutable record of the herb's origin.</p>
+            <img src="farmer input.png" alt="Farmer capturing data via mobile phone">
+            <p class="caption">An Indian farmer harvesting turmeric and logging details via a mobile app, showing '5kg Turmeric' input.</p>
+        </div>
+
+        <div class="section" id="offline-input">
+            <h2>2. Offline Support for Rural Farmers</h2>
+            <p>Understanding the challenges of rural connectivity, HERB TRACE allows farmers to input data even without internet. Data is stored locally and automatically syncs when connectivity is restored.</p>
+            <img src="offline_upload.png" alt="Farmer using smartphone offline">
+            <p class="caption">A farmer in a rural field uses a smartphone to enter herb details, with an 'Offline - Sync Pending' notification.</p>
+        </div>
+
+        <div class="section" id="ai-verification">
+            <h2>3. AI-Powered Verification & Validation</h2>
+            <p>To ensure authenticity and compliance, an advanced AI system automatically validates key details like species, geo-location, and seasonal restrictions against pre-defined rules. This minimizes human error and prevents fraudulent entries.</p>
+            <img src="ai_ver2.png" alt="AI verification dashboard">
+            <p class="caption">AI dashboard showing green check marks for location, season, and species recognition, with a farm map and seasonal calendar.</p>
+        </div>
+
+        <div class="section" id="secondary-collector">
+            <h2>4. Secondary Collector & Two-Party Acknowledgement</h2>
+            <p>For farmers without direct smartphone access, local collectors can assist by registering their harvest. Every handoff in the supply chain requires a two-party acknowledgment, creating an unbreakable chain of custody on the blockchain.</p>
+            <img src="second node upload.png" alt="Collector verifying on behalf of farmer">
+            <p class="caption">A local collector assists a farmer, using a smartphone to register herbs with a 'Verified on behalf of farmer' overlay.</p>
+        </div>
+
+        <div class="section" id="logistics-quality">
+            <h2>5. Logistics & Quality Assurance</h2>
+            <p>As herbs move from farm to processing, their journey is tracked. Lab technicians conduct quality tests, and reports are uploaded and verified on the system. Transport conditions and package integrity are also monitored.</p>
+            <img src="lab&log.png" alt="Logistics and quality control">
+            <p class="caption">A secure transport truck and a lab technician inspecting herbs, alongside a system interface showing lab report upload and transport details.</p>
+        </div>
+
+        <div class="section" id="geo-fence-rejection">
+            <h2>6. Geo-fencing & Smart Contract Enforcement</h2>
+            <p>Smart contracts automatically enforce rules, such as geo-fencing for harvest locations. Any attempt to register herbs from an unapproved zone is immediately flagged and rejected, enhancing product integrity.</p>
+            <img src="geofence.png" alt="Geo-fence rejection example">
+            <p class="caption">A digital map with a geo-fence, showing a farmer's phone receiving a 'Outside permitted zone' warning.</p>
+        </div>
+
+        <div class="section" id="batch-finalization">
+            <h2>7. Blockchain & Batch Finalization</h2>
+            <p>Once all checks are complete, batches are finalized on the blockchain, and unique QR codes are generated for each product. These codes serve as digital passports for the herbs.</p>
+            <img src="qr_gen&pack.png" alt="QR code generation in factory">
+            <p class="caption">A packaging factory printing QR codes on herbal product boxes, with a futuristic UI showing blockchain blocks and 'Batch ID Generated'.</p>
+        </div>
+
+        <div class="section" id="consumer-transparency">
+            <h2>8. Consumer Transparency: From Farm to Shelf</h2>
+            <p>Consumers can simply scan the QR code on the product to access the herb's complete journey, building trust and confidence in their purchase.</p>
+            <img src="qr_scan2.png" alt="Consumer scanning QR code">
+            <p class="caption">A customer in a supermarket scanning a QR code, revealing the product's journey from farm to company on their phone.</p>
+        </div>
+
+        <div class="section" id="feedback-insights">
+            <h2>9. Feedback Loop & Incentives</h2>
+            <p>Consumer scans provide valuable insights for demand forecasting and help build trust. Verified farmers earn 'Green Premium' badges, recognizing their sustainable practices and potentially leading to better prices and demand.</p>
+            <img src="feedback2.png" alt="Feedback loop to farmer">
+            <p class="caption">A happy consumer scanning a product in a store, with data flowing back to a farmer receiving a 'Consumers trust your batch' notification.</p>
+        </div>
+
+        <div class="section" id="incentive-badge">
+            <h2>10. Farmer Incentives: The Green Premium</h2>
+            <p>Our system not only ensures transparency but also rewards farmers for sustainable and quality practices. Earning a "Green Premium Badge" provides recognition and market advantages.</p>
+            <img src="greenincentive.png" alt="Farmer earning green premium badge">
+            <p class="caption">An Indian farmer holding herbs, receiving a 'Green Premium Badge Earned' notification on their phone, indicating higher value.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <h3>Technologies Powering HERB TRACE</h3>
+            <div class="tech-icons">
+                <img src="bc.jpg" alt="Blockchain">
+                <img src="tf.jpg" alt="TensorFlow-Lite">
+                <img src="node.jpg" alt="Node.js">
+                <img src="ipfs.jpg" alt="IPFS">
+                <img src="pwa.jpg" alt="PWA">
+            </div>
+            <div class="qr-demo">
+                <h3>Try a Demo Scan!</h3>
+                <p>Scan this QR code with your smartphone to experience the traceability.</p>
+                <a href="https://ayu-trace-drab.vercel.app/" target="_blank" rel="noopener"><img src="qr.jpg" alt="Demo QR Code"></a>
+            </div>
+            <p>&copy; 2023 HERB TRACE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Optional: Simple scroll-to-section for navigation, if you add a nav bar.
+        // For now, it just demonstrates how JS could be included.
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('HERB TRACE webpage loaded!');
+
+            // Example of how to dynamically update content or add interactivity
+            const feedbackSection = document.getElementById('feedback-insights');
+            if (feedbackSection) {
+                // You could add animations or data loading here later
+            }
+        });
+    </script>
+</body>
+</html>
